@@ -1,0 +1,27 @@
+﻿spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  application:
+    name: microservicecloud-config-clent
+server:
+  port: 8201
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8002-dev.com:8002/eureka/
+
+---
+spring:
+  profiles: test
+  application:
+    name: microservicecloud-config-clent
+server:
+  port: 8202
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://eureka8002-test.com:8002/eureka/
